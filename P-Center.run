@@ -1,0 +1,21 @@
+#RESET THE AMPL ENVIROMENT
+reset;
+
+#LOAD THE MODEL
+model P-Center.mod;
+
+#LOAD THE DATA
+data P-Center.dat;
+
+#DISPLAY THE PROBLEM FORMULATION
+# expand Constraint1,Constraint2,Constraint3,Constraint4;
+
+#CHANGE THE SOLVER (optional)
+option solver CPLEX;
+
+#SOLVE
+solve;
+
+#SHOW RESULTS
+display X,Y,z;
+display _total_solve_time;
